@@ -1,0 +1,132 @@
+/**
+ * Pavel Silinskii Social Share — front-end styles.
+ */
+
+:root {
+	--psss-facebook: #1877f2;
+	--psss-twitter: #000000;
+	--psss-linkedin: #0a66c2;
+	--psss-pinterest: #e60023;
+	--psss-whatsapp: #25d366;
+	--psss-copy: #6b7280;
+}
+
+.psss-share {
+	margin: 1.5em 0;
+}
+
+.psss-label {
+	display: block;
+	font-size: .85em;
+	font-weight: 600;
+	margin-bottom: .5em;
+	opacity: .7;
+}
+
+.psss-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+/* Buttons */
+.psss-btn,
+.psss-btn:visited,
+.psss-btn:hover,
+.psss-btn:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+.psss-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 14px;
+	font-family: inherit;
+	font-size: .875rem;
+	font-weight: 600;
+	line-height: 1.2;
+	border: none;
+	cursor: pointer;
+	transition: opacity .15s ease, transform .1s ease;
+}
+
+.psss-btn:hover {
+	opacity: .88;
+	transform: translateY(-1px);
+}
+
+.psss-btn:active {
+	transform: translateY(0);
+}
+
+.psss-btn:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+/* Networks */
+.psss-facebook  { background: var(--psss-facebook); }
+.psss-twitter   { background: var(--psss-twitter); }
+.psss-linkedin  { background: var(--psss-linkedin); }
+.psss-pinterest { background: var(--psss-pinterest); }
+.psss-whatsapp  { background: var(--psss-whatsapp); }
+.psss-copy      { background: var(--psss-copy); }
+
+/* Shapes */
+.psss-shape-rounded .psss-btn { border-radius: 6px; }
+.psss-shape-circle .psss-btn  { border-radius: 999px; }
+.psss-shape-square .psss-btn  { border-radius: 0; }
+
+/* Sizes */
+.psss-size-small .psss-btn {
+	padding: 5px 10px;
+	font-size: .8rem;
+}
+
+.psss-size-large .psss-btn {
+	padding: 11px 20px;
+	font-size: 1rem;
+}
+
+/* Styles */
+.psss-style-icon_only .psss-text {
+	display: none;
+}
+
+.psss-style-icon_only .psss-btn {
+	padding: 8px;
+}
+
+.psss-style-text_only .psss-icon {
+	display: none;
+}
+
+/* Icons */
+.psss-icon {
+	display: inline-flex;
+}
+
+.psss-icon svg {
+	display: block;
+	width: 16px;
+	height: 16px;
+	fill: currentColor;
+}
+
+.psss-size-large .psss-icon svg {
+	width: 20px;
+	height: 20px;
+}
+
+@media (max-width: 480px) {
+	.psss-buttons {
+		gap: 6px;
+	}
+
+	.psss-btn {
+		padding: 7px 10px;
+		font-size: .8rem;
+	}
+}
